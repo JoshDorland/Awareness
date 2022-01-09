@@ -14,6 +14,11 @@
 		9E0833B827873A0600A5F865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0833B627873A0600A5F865 /* LaunchScreen.storyboard */; };
 		9E0833C1278A456600A5F865 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9E0833C0278A456600A5F865 /* FirebaseAuth */; };
 		9E0833C3278B340300A5F865 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0833C2278B340300A5F865 /* constants.swift */; };
+		9E0833C9278B3DD300A5F865 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E0833C8278B3DD300A5F865 /* Quicksand-Bold.ttf */; };
+		9E0833CE278B3E4800A5F865 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E0833CA278B3E4800A5F865 /* Quicksand-Medium.ttf */; };
+		9E0833CF278B3E4800A5F865 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E0833CB278B3E4800A5F865 /* Quicksand-SemiBold.ttf */; };
+		9E0833D0278B3E4800A5F865 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E0833CC278B3E4800A5F865 /* Quicksand-Regular.ttf */; };
+		9E0833D1278B3E4800A5F865 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E0833CD278B3E4800A5F865 /* Quicksand-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		9E0833B727873A0600A5F865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E0833B927873A0600A5F865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0833C2278B340300A5F865 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		9E0833C8278B3DD300A5F865 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		9E0833CA278B3E4800A5F865 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		9E0833CB278B3E4800A5F865 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
+		9E0833CC278B3E4800A5F865 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		9E0833CD278B3E4800A5F865 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 		9E0833AA27873A0600A5F865 /* Awareness */ = {
 			isa = PBXGroup;
 			children = (
+				9E0833C7278B3D6E00A5F865 /* Fonts */,
 				9E0833C4278B362100A5F865 /* Model */,
 				9E0833C5278B362600A5F865 /* View */,
 				9E0833C6278B362A00A5F865 /* Controller */,
@@ -91,6 +102,18 @@
 			children = (
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		9E0833C7278B3D6E00A5F865 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9E0833CC278B3E4800A5F865 /* Quicksand-Regular.ttf */,
+				9E0833CD278B3E4800A5F865 /* Quicksand-Light.ttf */,
+				9E0833CA278B3E4800A5F865 /* Quicksand-Medium.ttf */,
+				9E0833CB278B3E4800A5F865 /* Quicksand-SemiBold.ttf */,
+				9E0833C8278B3DD300A5F865 /* Quicksand-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +181,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E0833B827873A0600A5F865 /* LaunchScreen.storyboard in Resources */,
+				9E0833D0278B3E4800A5F865 /* Quicksand-Regular.ttf in Resources */,
+				9E0833CF278B3E4800A5F865 /* Quicksand-SemiBold.ttf in Resources */,
+				9E0833D1278B3E4800A5F865 /* Quicksand-Light.ttf in Resources */,
+				9E0833CE278B3E4800A5F865 /* Quicksand-Medium.ttf in Resources */,
+				9E0833C9278B3DD300A5F865 /* Quicksand-Bold.ttf in Resources */,
 				9E0833B527873A0600A5F865 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

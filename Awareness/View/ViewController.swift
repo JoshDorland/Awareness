@@ -9,19 +9,25 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var titleField: UILabel!
+    var errorField: UILabel!
+    var dontHaveAccount: UILabel!
+    
+    var emailField: UITextField!
+    var passwordField: UITextField!
+    
+    var loginButton = UIButton(type: .custom)
+    var forgotPassButton = UIButton(type: .custom)
+    var signUpButton = UIButton(type: .custom)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor(red: 1.0, green: 0.95, blue: 0.74, alpha: 1.0)
         
-        let title = UILabel(frame: CGRect(x: 128.31, y: 187, width: 241.69, height: 51))
-        title.text = constants().appName
-        title.textColor = UIColor(red: CGFloat(constants().appDkGreen[0]), green: CGFloat(constants().appDkGreen[1]), blue: CGFloat(constants().appDkGreen[2]), alpha: CGFloat(constants().appDkGreen[3]))
-        title.font = UIFont(name: "FuroMano", size: 43.0)
-        
-        view.addSubview(title)
+        //Setting background color
+        view.backgroundColor = constants().appBaige()
+                
     }
-
-
 }
 
