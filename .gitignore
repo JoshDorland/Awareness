@@ -1,6 +1,7 @@
 ## My Additions
 .DS_Store
 AssetFiles/
+Awareness/constants.swift
 
 ## User settings
 xcuserdata/
