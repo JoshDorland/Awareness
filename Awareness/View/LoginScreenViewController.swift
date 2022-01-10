@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         let topImageContainerView = UIView()
         
         //Properties
-        topImageContainerView.backgroundColor = .blue
+        //topImageContainerView.backgroundColor = .blue
         //For testing -> topImageContainerView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         
         //Enables autolayour for dividerView
@@ -26,10 +26,20 @@ class ViewController: UIViewController {
         let titleView = UILabel()
         
         //Properties
-        titleView.text = constants().appName
+//        titleView.text = constants().appName
         titleView.textAlignment = .center
-        titleView.font = UIFont(name: "Quicksand-Bold", size: 43.0)
-        titleView.textColor = constants().appDkGreen()
+//      titleView.font = UIFont(name: "Quicksand-Bold", size: 43.0)
+//        titleView.textColor = constants().appDkGreen()
+        
+        //Another way for text
+        let attributedText: [NSAttributedString.Key: Any] = [
+            .font: UIFont(name: "Quicksand-Bold", size: 43.0)!,
+            .foregroundColor: constants().appDkGreen()
+        ]
+        
+        let attributedTitle = NSMutableAttributedString(string: constants().appName, attributes: attributedText)
+        
+        titleView.attributedText = attributedTitle
         
         //Enables autolayout for our text size
         titleView.translatesAutoresizingMaskIntoConstraints = false
