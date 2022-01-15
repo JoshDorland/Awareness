@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
     
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
             .foregroundColor: constants().appDkGreen()
         ]
         
-        let attributedTitle = NSMutableAttributedString(string: constants().appName, attributes: attributedText)
+        let attributedTitle = NSAttributedString(string: constants().appName, attributes: attributedText)
         
         titleView.attributedText = attributedTitle
         
@@ -46,15 +47,71 @@ class ViewController: UIViewController {
         return titleView
     }()
     
+    let emailFieldView: UITextField = {
+        let emailField = UITextField()
+        emailField.backgroundColor = constants().appLtGreen()
+        emailField.placeholder = "Email"
+        emailField.borderStyle =  UITextField.BorderStyle.roundedRect
+        
+        emailField.translatesAutoresizingMaskIntoConstraints = false
+        return emailField
+    }()
+    
+    let passwordFieldView: UITextField = {
+        let passwordField = UITextField()
+        passwordField.backgroundColor = constants().appLtGreen()
+        passwordField.placeholder = "Password"
+        passwordField.borderStyle =  UITextField.BorderStyle.roundedRect
+
+        passwordField.translatesAutoresizingMaskIntoConstraints = false
+        return passwordField
+    }()
+    
+    let forgotPassView: UIButton = {
+        let forgotPass = UIButton(type: .custom)
+        forgotPass.setTitleColor(.systemBlue, for: .normal)
+        
+        let attributedText: [NSAttributedString.Key: Any] = [
+            .font: UIFont(name: "Quicksand-Regular", size: 14.0)!,
+            .foregroundColor: UIColor.systemBlue
+        ]
+        
+        let attributedTitle = NSAttributedString(string: "Forgot Password?", attributes: attributedText)
+        
+        forgotPass.setAttributedTitle(attributedTitle, for: .normal)
+        forgotPass.sizeToFit()
+        
+        forgotPass.translatesAutoresizingMaskIntoConstraints = false
+        return forgotPass
+    }()
+    
+    let loginButtonView: UIButton = {
+        let loginButton = UIButton(type: .custom)
+        loginButton.backgroundColor = .black
+        loginButton.setTitle("Log In", for: .normal)
+        
+        loginButton.frame = CGRect(x: 100, y: 100, width: 40, height: 50)
+                        
+//        let attributedText: [NSAttributedString.Key: Any] = [
+//            .font: UIFont(name: "Quicksand-Bold", size: 10.0)!
+//        ]
+//
+//        let attributedTitle = NSAttributedString(string: "Log In", attributes: attributedText)
+//
+//        loginButton.setAttributedTitle(attributedTitle, for: .normal)
+//        loginButton.sizeToFit()
+        
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
+        return loginButton
+    }()
+    
     
     var errorField: UILabel!
     var dontHaveAccount: UILabel!
     
-    var emailField: UITextField!
     var passwordField: UITextField!
     
     var loginButton = UIButton(type: .custom)
-    var forgotPassButton = UIButton(type: .custom)
     var signUpButton = UIButton(type: .custom)
     
     
@@ -69,6 +126,10 @@ class ViewController: UIViewController {
         
         //Call the titleLabel
         view.addSubview(dividerView)
+        view.addSubview(emailFieldView)
+        view.addSubview(passwordFieldView)
+        view.addSubview(forgotPassView)
+        view.addSubview(loginButton)
         
         layoutView()
     }
@@ -90,12 +151,28 @@ class ViewController: UIViewController {
         
         dividerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
         
-
         //Title Constraints
         titleView.centerXAnchor.constraint(equalTo: dividerView.centerXAnchor).isActive = true
         titleView.centerYAnchor.constraint(equalTo: dividerView.centerYAnchor).isActive = true
         titleView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         titleView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        
+        //Email text field constraint
+        emailFieldView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        emailFieldView.bottomAnchor.constraint(equalTo: dividerView.bottomAnchor, constant: -10).isActive = true
+        emailFieldView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.80).isActive = true
+        
+        //Password text field constraint
+        passwordFieldView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        passwordFieldView.topAnchor.constraint(equalTo: dividerView.bottomAnchor, constant: 10).isActive = true
+        passwordFieldView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.80).isActive = true
+        
+        //Forgot Password Label Constraints
+        forgotPassView.leadingAnchor.constraint(equalTo: passwordFieldView.leadingAnchor).isActive = true
+        forgotPassView.topAnchor.constraint(equalTo: passwordFieldView.bottomAnchor, constant: 10).isActive = true
+        
+        //Login Button Constraints
+
     }
 }
 
